@@ -126,7 +126,7 @@ userRouer.post("/login", async (req, res) => {
         res.status(406).json({ err: `user password is worng..` });
       }
     } else {
-      res.status(406).json({ msg: `user email is worng..` });
+      res.status(406).json({ err: `user email is worng..` });
     }
   } catch (err) {
     res.status(500).send({ err: err.message });
