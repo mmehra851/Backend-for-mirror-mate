@@ -114,6 +114,7 @@ userRouer.post("/signup", async (req, res) => {
   }
 });
 userRouer.post("/login", async (req, res) => {
+  console.log(req.body)
   try {
     let user = await userModel.findOne({ email: req.body.email });
     if (user.email) {
