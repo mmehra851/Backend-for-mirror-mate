@@ -117,6 +117,7 @@ userRouer.post("/login", async (req, res) => {
   console.log(req.body)
   try {
     let user = await userModel.findOne({ email: req.body.email });
+    console.log(user);
     if (user.email) {
       if (await bcrypt.compare(req.body.password, user.password)) {
 
